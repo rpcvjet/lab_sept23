@@ -17,7 +17,6 @@ function sum(a,b){ //eslint-disable-line
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -29,12 +28,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-
+function multiply(a,b){ // eslint-disable-line
+  var product = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+  var output = [product, message];
+  return output;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -51,11 +53,31 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+  var sumofAandB = sum(a,b);
+  // console.log(sumofAandB[0]);
 
+  var sumofABandC = sum(sumofAandB[0], c);
+  // console.log(sumofABandC);
+  // console.log(sumofABandC[0]);
+
+  var productofAB = multiply(a,b);
+  // // console.log (productofAB[0]);
+
+  var productofABandC = multiply(productofAB[0], c);
+  // console.log (productofABandC[0]);
+
+  var thirdElement =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumofABandC[0] + '.';
+  // console.log(thirdElement)
+
+  var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productofABandC[0] + '.';
+  // console.log(fourthElement);
+
+  return [sumofABandC[0], productofABandC[0], thirdElement, fourthElement];
+		// console.log (question3finalAnswer);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
