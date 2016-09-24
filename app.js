@@ -134,7 +134,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+var productofArray = 1;
 function multiplyArray(testArray){ //eslint-disable-line
+// console.log(testArray);
+  for (var i = 0; i < testArray.length; i++){
+// console.log(i);
+    productofArray = multiply(productofArray, testArray[i])[0];
+  }
+// console.log(productofArray);
+
+  var finalstring = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + productofArray + '.';
+// console.log(finalstring);
+
+  var lastanswer = [productofArray, finalstring];
+  console.log(lastanswer);
+  return lastanswer;
 
 }
 
