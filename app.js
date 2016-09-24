@@ -66,6 +66,13 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var productofABandC = multiply(productofAB[0], c);
   // console.log (productofABandC[0]);
 
+
+  // var thirdElement =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumofABandC[0] + '.';
+  // console.log(thirdElement)
+
+  // var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productofABandC[0] + '.';
+  // console.log(fourthElement);
+
   var thirdElement =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumofABandC[0] + '.';
   // console.log(thirdElement)
 
@@ -95,12 +102,24 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
+  var firstnumberofArray = testArray[0];
 
+  var secondnumberofArray = testArray[1];
+
+  var thirdnumberofArray = testArray[2]; //4
+
+  var sumofFirstandSecond = sum(firstnumberofArray,secondnumberofArray)[0];//5
+
+  var allThree = sum(sumofFirstandSecond,thirdnumberofArray)[0];
+  // console.log(allThree);
+  var bigArray = testArray[0] + ',' + testArray[1] + ',' + testArray [2] + ' was passed in as an array of numbers, and ' + allThree + ' is their sum.';
+  var question4finalanswer = [allThree, bigArray];
+  return question4finalanswer;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
