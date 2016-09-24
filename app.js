@@ -66,6 +66,13 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var productofABandC = multiply(productofAB[0], c);
   // console.log (productofABandC[0]);
 
+
+  // var thirdElement =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumofABandC[0] + '.';
+  // console.log(thirdElement)
+
+  // var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + productofABandC[0] + '.';
+  // console.log(fourthElement);
+
   var thirdElement =  a + ' and ' + b + ' and ' + c + ' sum to ' + sumofABandC[0] + '.';
   // console.log(thirdElement)
 
